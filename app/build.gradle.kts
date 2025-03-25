@@ -1,7 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("com.google.gms.google-services")
+    alias(libs.plugins.google.services)
+    alias(libs.plugins.hilt.android)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -60,4 +62,23 @@ dependencies {
 
     //Splash Screen Api
     implementation (libs.androidx.core.splashscreen)
+
+    //Dagger Hilt
+    implementation (libs.hilt.android)
+    kapt (libs.hilt.compiler)
+
+    //Lifecycle
+    implementation (libs.androidx.lifecycle.livedata.ktx)
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+
+    //Navigation KTX
+    implementation (libs.androidx.navigation.fragment.ktx)
+    implementation (libs.androidx.navigation.ui.ktx)
+
+    //Glide
+    implementation (libs.glide)
+}
+
+kapt {
+    correctErrorTypes = true
 }

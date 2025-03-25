@@ -1,4 +1,4 @@
-package com.enigeandroid.tvupgrade.Domain.Repository.Auth
+package com.enigeandroid.tvupgrade.domain.repository.Auth
 
 interface FirebaseAuthentication {
 

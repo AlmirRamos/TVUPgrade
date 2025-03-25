@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".Presenter.Auth.Register.RegisterFragment">
+    tools:context=".presenter.auth.register.RegisterFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -47,7 +47,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
         <EditText
-            android:id="@+id/editEmail"
+            android:id="@+id/editEmailRegister"
             style="@style/ThemeEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
             tools:ignore="Autofill" />
 
         <EditText
-            android:id="@+id/editSenha"
+            android:id="@+id/editSenhaRegister"
             style="@style/ThemeEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -77,11 +77,11 @@
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editEmail"
+            app:layout_constraintTop_toBottomOf="@+id/editEmailRegister"
             tools:ignore="Autofill,PrivateResource" />
 
         <Button
-            android:id="@+id/btnEntrarRegister"
+            android:id="@+id/btnInscrevaseRegister"
             style="@style/ThemePrimaryButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editSenha" />
+            app:layout_constraintTop_toBottomOf="@+id/editSenhaRegister" />
 
         <ImageView
             android:id="@+id/pbRegister"
@@ -102,7 +102,7 @@
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnEntrarRegister"
+            app:layout_constraintTop_toBottomOf="@+id/btnInscrevaseRegister"
             tools:ignore="ContentDescription"
             tools:src="@drawable/loading"
             tools:visibility="visible" />
@@ -209,7 +209,7 @@
                 android:textColor="#9e9e9e" />
 
             <TextView
-                android:id="@+id/btnCriarConta"
+                android:id="@+id/btnCriarContaRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

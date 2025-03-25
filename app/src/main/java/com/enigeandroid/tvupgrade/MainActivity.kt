@@ -1,14 +1,15 @@
 package com.enigeandroid.tvupgrade
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.enigeandroid.tvupgrade.databinding.ActivityMainBinding
+import com.enigeandroid.tvupgrade.presenter.auth.register.RegisterFragment
+import com.enigeandroid.tvupgrade.presenter.onboard.OnboardFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private val binding by lazy {
@@ -21,15 +22,19 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+       /* ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }
-        
-        binding.btnTeste.setOnClickListener {
-            Toast.makeText(this, "Testando o botão da tela de layout", Toast.LENGTH_SHORT).show()
-        }
+        }*/
+
+        val registerFragment = RegisterFragment()
+        val onboardFragment = OnboardFragment()
+
+        val fragmentManager = supportFragmentManager
+        val transaction = fragmentManager.beginTransaction()
+        transaction.add(R.id.container, onboardFragment)
+        transaction.commit()
 
     }
 }

@@ -1,13 +1,14 @@
 {
   "project_info": {
-    "project_number": "730066105876",
-    "project_id": "appfilmes-6af9c",
-    "storage_bucket": "appfilmes-6af9c.firebasestorage.app"
+    "project_number": "732430967245",
+    "firebase_url": "https://tvup-61315-default-rtdb.firebaseio.com",
+    "project_id": "tvup-61315",
+    "storage_bucket": "tvup-61315.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:730066105876:android:f5f9ef5206335be5899901",
+        "mobilesdk_app_id": "1:732430967245:android:c9c483eb047c1363a02484",
         "android_client_info": {
           "package_name": "com.enigeandroid.tvupgrade"
         }
@@ -15,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDzQuksXJJ-WzW5yErF8oyD8Ze7be9vTes"
+          "current_key": "AIzaSyDWM7GwiZBMLpXe2G2kXLTXIS4BEIrzrfw"
         }
       ],
       "services": {

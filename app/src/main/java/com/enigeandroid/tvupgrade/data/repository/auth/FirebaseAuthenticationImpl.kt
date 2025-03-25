@@ -1,10 +1,11 @@
-package com.enigeandroid.tvupgrade.Data.Repository.Auth
+package com.enigeandroid.tvupgrade.data.repository.auth
 
-import com.enigeandroid.tvupgrade.Domain.Repository.Auth.FirebaseAuthentication
+import com.enigeandroid.tvupgrade.domain.repository.Auth.FirebaseAuthentication
 import com.google.firebase.auth.FirebaseAuth
+import javax.inject.Inject
 import kotlin.coroutines.suspendCoroutine
 
-class FirebaseAuthenticationImpl(
+class FirebaseAuthenticationImpl @Inject constructor(
     private val firebaseAuth: FirebaseAuth
 ) : FirebaseAuthentication {
 

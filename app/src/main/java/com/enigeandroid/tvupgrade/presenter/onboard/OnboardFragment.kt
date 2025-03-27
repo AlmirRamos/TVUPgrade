@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.enigeandroid.tvupgrade.R
 import com.enigeandroid.tvupgrade.databinding.FragmentOnboardBinding
 
 class OnboardFragment : Fragment() {
@@ -16,10 +18,20 @@ class OnboardFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //return inflater.inflate(R.layout.fragment_onboard, container, false)
         _binding = FragmentOnboardBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initListener()
+    }
+
+    private fun initListener() {
+        binding.btnIniciarOnboard.setOnClickListener {
+            findNavController().navigate(R.id.action_onboardFragment_to_navigation)
+        }
     }
 
     override fun onDestroyView() {

@@ -1,17 +1,23 @@
 package com.enigeandroid.tvupgrade.presenter.auth.register
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import br.com.hellodev.netflix.util.FirebaseHelper
 import com.bumptech.glide.Glide
 import com.enigeandroid.tvupgrade.R
 import com.enigeandroid.tvupgrade.databinding.FragmentRegisterBinding
+import com.enigeandroid.tvupgrade.presenter.MainActivity
 import com.enigeandroid.tvupgrade.util.StateView
+import com.enigeandroid.tvupgrade.util.hideKeyboard
+import com.enigeandroid.tvupgrade.util.initToolbar
+import com.enigeandroid.tvupgrade.util.isEmailValid
+import com.enigeandroid.tvupgrade.util.showSnackBar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -34,7 +40,7 @@ class RegisterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        initToolbar( toolbar = binding.toolbarRegister)
         initListener()
     }
 
@@ -53,14 +59,15 @@ class RegisterFragment : Fragment() {
         val email = binding.editEmailRegister.text.toString()
         val password = binding.editSenhaRegister.text.toString()
 
-        if(email.isNotEmpty()) {
+        if(email.isEmailValid()) {
             if (password.isNotEmpty()) {
+                hideKeyboard()
                 register(email, password)
             }else{
-                Toast.makeText(requireContext(), "Erro de senha", Toast.LENGTH_SHORT).show()
+                showSnackBar(R.string.text_password_empty)
             }
         }else {
-            Toast.makeText(requireContext(), "Erro de email", Toast.LENGTH_SHORT).show()
+            showSnackBar(R.string.text_email_empty)
         }
     }
 
@@ -71,11 +78,13 @@ class RegisterFragment : Fragment() {
                     binding.pbRegister.isVisible = true
                 }
                 is StateView.Success -> {
-                    Toast.makeText(requireContext(), "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(requireContext(), MainActivity::class.java))
+                    requireActivity().finish()
+                    showSnackBar(R.string.text_sucesso_register)
                 }
                 is StateView.Error -> {
                     binding.pbRegister.isVisible = false
-                    Toast.makeText(requireContext(), stateView.message, Toast.LENGTH_SHORT).show()
+                    showSnackBar(FirebaseHelper.validError(stateView.message ?: ""))
                 }
             }
         }

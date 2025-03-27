@@ -1,10 +1,13 @@
-package com.enigeandroid.tvupgrade
+package com.enigeandroid.tvupgrade.presenter
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.enigeandroid.tvupgrade.R
 import com.enigeandroid.tvupgrade.databinding.ActivityMainBinding
+import com.enigeandroid.tvupgrade.presenter.auth.forgot.ForgotFragment
+import com.enigeandroid.tvupgrade.presenter.auth.login.LoginFragment
 import com.enigeandroid.tvupgrade.presenter.auth.register.RegisterFragment
 import com.enigeandroid.tvupgrade.presenter.onboard.OnboardFragment
 import dagger.hilt.android.AndroidEntryPoint
@@ -29,11 +32,13 @@ class MainActivity : AppCompatActivity() {
         }*/
 
         val registerFragment = RegisterFragment()
+        val loginFragment = LoginFragment()
+        val forgotFragment = ForgotFragment()
         val onboardFragment = OnboardFragment()
 
         val fragmentManager = supportFragmentManager
         val transaction = fragmentManager.beginTransaction()
-        transaction.add(R.id.container, onboardFragment)
+        transaction.add(R.id.container, forgotFragment)
         transaction.commit()
 
     }

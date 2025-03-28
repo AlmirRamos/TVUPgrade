@@ -68,4 +68,14 @@
     <string name="strong_password_register_fragment">Insira uma senha mais forte.</string>
     <string name="text_email_empty_login_fragment">Digite um email válido.</string>
     <string name="text_password_empty_login_fragment">Digite sua senha</string>
+
+    <!--    BottomBar-->
+    <string name="title_menu_home">Início</string>
+    <string name="title_menu_search">Pesquisar</string>
+    <string name="title_menu_favorite">Favorite</string>
+    <string name="title_menu_download">Baixar</string>
+    <string name="title_menu_profile">Perfil</string>
+
+    <!--   genre item-->
+    <string name="text_show_all_genre_item">Ver todos</string>
 </resources>

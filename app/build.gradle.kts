@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.google.services)
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {

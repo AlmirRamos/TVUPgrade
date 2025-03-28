@@ -16,5 +16,5 @@
     android:name="androidx.navigation.fragment.NavHostFragment"
     app:defaultNavHost="true"
     app:navGraph="@navigation/auth_graph"
-    tools:context=".presenter.auth.activitys.AuthActivity"/>
+    tools:context=".presenter.auth.activity.AuthActivity"/>
 </LinearLayout>

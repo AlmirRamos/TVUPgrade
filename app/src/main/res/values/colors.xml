@@ -8,12 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="color_default">#e21221</color>
-    <color name="success">#4ade80</color>
-    <color name="info">#246bfd</color>
-    <color name="warning">#facc15</color>
-    <color name="error">#f75555</color>
-    <color name="disabled">#d8d8d8</color>
-    <color name="disabled_button">#c1232f</color>
+    <color name="success">#4ADE80</color>
+    <color name="info">#246BFD</color>
+    <color name="warning">#FACC15</color>
+    <color name="error">#F75555</color>
+    <color name="disabled">#D8D8D8</color>
+    <color name="disabled_button">#C1232F</color>
+    <color name="color_default">#E21221</color>
 
 </resources>

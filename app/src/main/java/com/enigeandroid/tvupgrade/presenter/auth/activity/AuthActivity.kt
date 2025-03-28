@@ -1,4 +1,4 @@
-package com.enigeandroid.tvupgrade.presenter.auth.activitys
+package com.enigeandroid.tvupgrade.presenter.auth.activity
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

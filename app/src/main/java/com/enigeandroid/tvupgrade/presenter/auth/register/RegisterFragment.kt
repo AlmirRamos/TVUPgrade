@@ -12,7 +12,7 @@ import br.com.hellodev.netflix.util.FirebaseHelper
 import com.bumptech.glide.Glide
 import com.enigeandroid.tvupgrade.R
 import com.enigeandroid.tvupgrade.databinding.FragmentRegisterBinding
-import com.enigeandroid.tvupgrade.presenter.MainActivity
+import com.enigeandroid.tvupgrade.presenter.main.activity.MainActivity
 import com.enigeandroid.tvupgrade.util.StateView
 import com.enigeandroid.tvupgrade.util.hideKeyboard
 import com.enigeandroid.tvupgrade.util.initToolbar

@@ -9,12 +9,12 @@ plugins {
 
 android {
     namespace = "com.enigeandroid.tvupgrade"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.enigeandroid.tvupgrade"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -53,6 +53,13 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    // OKHTTP -> define a BOM and its version
+    implementation(platform(libs.okhttp.bom))
+
+    // define any required OkHttp artifacts without version
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+
     //Firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
@@ -78,6 +85,10 @@ dependencies {
 
     //Glide
     implementation (libs.glide)
+
+    //Retrofit
+    implementation (libs.retrofit)
+    implementation (libs.gson)
 }
 
 kapt {

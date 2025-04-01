@@ -41,3 +41,8 @@ fun String.isEmailValid(): Boolean {
     val emailPattern = Regex("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+")
     return emailPattern.matches(this)
 }
+
+const val baseUrl = "https://api.themoviedb.org/3/"
+const val chaveAPI = "2830cd270cbee0ad89e4208b50b8756c"
+
+

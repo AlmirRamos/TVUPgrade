@@ -1,6 +1,6 @@
 package com.enigeandroid.tvupgrade.data.repository.auth
 
-import com.enigeandroid.tvupgrade.domain.repository.Auth.FirebaseAuthentication
+import com.enigeandroid.tvupgrade.domain.repository.auth.FirebaseAuthentication
 import com.google.firebase.auth.FirebaseAuth
 import javax.inject.Inject
 import kotlin.coroutines.suspendCoroutine

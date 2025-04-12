@@ -4,9 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class GenresResponse(
 
-    @SerializedName("id")
-    val id: Int?,
+    @SerializedName("genres")
+    val genres: List<GenresResponse>?
 
-    @SerializedName("name")
-    val name: String?
 )

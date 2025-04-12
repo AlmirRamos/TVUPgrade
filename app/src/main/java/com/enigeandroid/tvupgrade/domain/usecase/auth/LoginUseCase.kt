@@ -1,6 +1,6 @@
 package com.enigeandroid.tvupgrade.domain.usecase.auth
 
-import com.enigeandroid.tvupgrade.domain.repository.Auth.FirebaseAuthentication
+import com.enigeandroid.tvupgrade.domain.repository.auth.FirebaseAuthentication
 import javax.inject.Inject
 
 class LoginUseCase @Inject constructor (

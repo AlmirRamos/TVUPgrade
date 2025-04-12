@@ -1,7 +1,7 @@
 package com.enigeandroid.tvupgrade.di
 
 import com.enigeandroid.tvupgrade.data.repository.auth.FirebaseAuthenticationImpl
-import com.enigeandroid.tvupgrade.domain.repository.Auth.FirebaseAuthentication
+import com.enigeandroid.tvupgrade.domain.repository.auth.FirebaseAuthentication
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

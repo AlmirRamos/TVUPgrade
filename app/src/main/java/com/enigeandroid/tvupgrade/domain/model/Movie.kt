@@ -1,9 +1,8 @@
 package com.enigeandroid.tvupgrade.domain.model
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
-@Suppress("DEPRECATED_ANNOTATION")
 @Parcelize
 data class Movie(
     val adult: Boolean?,

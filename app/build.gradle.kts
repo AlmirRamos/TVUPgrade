@@ -9,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.enigeandroid.tvupgrade"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.enigeandroid.tvupgrade"

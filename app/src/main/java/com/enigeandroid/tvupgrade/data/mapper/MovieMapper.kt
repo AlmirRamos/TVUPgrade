@@ -1,11 +1,33 @@
 package com.enigeandroid.tvupgrade.data.mapper
 
 import com.enigeandroid.tvupgrade.data.model.GenreResponse
+import com.enigeandroid.tvupgrade.data.model.MovieResponse
 import com.enigeandroid.tvupgrade.domain.model.Genre
+import com.enigeandroid.tvupgrade.domain.model.Movie
 
 fun GenreResponse.toDomain(): Genre {
     return Genre(
-        id = id,
-        name = name
+        id = this.id,
+        name = this.name
     )
+}
+
+fun MovieResponse.toDomain(): Movie {
+    return Movie(
+        adult = adult,
+        backdropPath = backdropPath,
+        genreIds = genreIds,
+        id = id,
+        originalLanguage = originalLanguage,
+        originalTitle = originalTitle,
+        overview = overview,
+        popularity = popularity,
+        posterPath = posterPath,
+        releaseDate = releaseDate,
+        title = title,
+        video = video,
+        voteAverage = voteAverage,
+        voteCount = voteCount
+    )
+
 }

@@ -4,6 +4,7 @@ import com.enigeandroid.tvupgrade.data.model.GenreResponse
 import com.enigeandroid.tvupgrade.data.model.MovieResponse
 import com.enigeandroid.tvupgrade.domain.model.Genre
 import com.enigeandroid.tvupgrade.domain.model.Movie
+import com.enigeandroid.tvupgrade.presenter.model.GenrePresentation
 
 fun GenreResponse.toDomain(): Genre {
     return Genre(
@@ -30,4 +31,12 @@ fun MovieResponse.toDomain(): Movie {
         voteCount = voteCount
     )
 
+}
+
+fun Genre.toPresentation(): GenrePresentation {
+    return GenrePresentation(
+        id = id,
+        name = name,
+        movies = emptyList()
+    )
 }

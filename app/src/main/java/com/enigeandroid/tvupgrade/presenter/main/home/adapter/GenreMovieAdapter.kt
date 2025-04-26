@@ -26,7 +26,6 @@ class GenreMovieAdapter: ListAdapter<GenrePresentation, GenreMovieAdapter.MyView
             ): Boolean {
                 return oldItem == newItem
             }
-
         }
     }
 
